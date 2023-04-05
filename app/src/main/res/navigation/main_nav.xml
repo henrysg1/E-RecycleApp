@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav">
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.example.e_recycletest.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_scanFragment"
+            app:destination="@id/scan_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scan_fragment"
+        android:name="com.example.e_recycletest.fragments.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_settingsFragment"
+            app:destination="@id/settings_fragment" />
+    </fragment>
+</navigation>
